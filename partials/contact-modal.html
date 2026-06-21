@@ -1,0 +1,68 @@
+<div id="contact-modal"
+     class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-6">
+    <div class="modal bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden" onclick="event.stopImmediatePropagation()">
+        <div class="px-8 pt-8 pb-6 border-b flex items-center justify-between">
+            <div>
+                <div class="font-semibold text-2xl tracking-tight">Request a consultation</div>
+                <div class="text-sm text-gray-500 mt-1">Complete the form to open an email to consultation@sigaint.au</div>
+            </div>
+            <button type="button" data-action="close-modal" class="text-gray-400 hover:text-gray-600 w-9 h-9 flex items-center justify-center text-2xl leading-none" aria-label="Close">&times;</button>
+        </div>
+
+        <form id="contact-form" class="p-8 space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label for="full-name" class="block text-xs font-semibold tracking-wider text-gray-500 mb-1.5">FULL NAME</label>
+                    <input type="text" id="full-name" required
+                           class="w-full border border-gray-200 focus:border-[#00C9C8] rounded-2xl px-4 py-3 text-sm outline-none transition-colors" placeholder="Alex Rivera">
+                </div>
+                <div>
+                    <label for="email" class="block text-xs font-semibold tracking-wider text-gray-500 mb-1.5">WORK EMAIL</label>
+                    <input type="email" id="email" required
+                           class="w-full border border-gray-200 focus:border-[#00C9C8] rounded-2xl px-4 py-3 text-sm outline-none transition-colors" placeholder="you@agency.gov.au">
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label for="organisation" class="block text-xs font-semibold tracking-wider text-gray-500 mb-1.5">ORGANISATION</label>
+                    <input type="text" id="organisation" required
+                           class="w-full border border-gray-200 focus:border-[#00C9C8] rounded-2xl px-4 py-3 text-sm outline-none transition-colors" placeholder="Department of Infrastructure">
+                </div>
+                <div>
+                    <label for="role" class="block text-xs font-semibold tracking-wider text-gray-500 mb-1.5">ROLE</label>
+                    <input type="text" id="role"
+                           class="w-full border border-gray-200 focus:border-[#00C9C8] rounded-2xl px-4 py-3 text-sm outline-none transition-colors" placeholder="CTO / CISO / Head of Platform">
+                </div>
+            </div>
+
+            <div>
+                <label for="goal" class="block text-xs font-semibold tracking-wider text-gray-500 mb-1.5">WHAT ARE YOU LOOKING TO ACHIEVE?</label>
+                <select id="goal" required class="w-full border border-gray-200 focus:border-[#00C9C8] rounded-2xl px-4 py-3 text-sm outline-none transition-colors bg-white">
+                    <option value="">Select an option...</option>
+                    <option value="platform-modernisation">Platform modernisation / Kubernetes transformation</option>
+                    <option value="zero-trust">Zero-trust architecture implementation</option>
+                    <option value="security-audit">Security audit &amp; compliance review</option>
+                    <option value="gitops">GitOps &amp; automation strategy</option>
+                    <option value="ongoing-support">Ongoing platform partnership / retainer</option>
+                    <option value="other">Something else</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="message" class="block text-xs font-semibold tracking-wider text-gray-500 mb-1.5">ADDITIONAL DETAILS (OPTIONAL)</label>
+                <textarea id="message" rows="3"
+                          class="w-full border border-gray-200 focus:border-[#00C9C8] rounded-3xl px-4 py-3 text-sm outline-none resize-y transition-colors"
+                          placeholder="Describe your current environment, timeline, or compliance requirements..."></textarea>
+            </div>
+
+            <div class="pt-3">
+                <button type="submit"
+                        class="w-full py-4 bg-black hover:bg-zinc-900 active:bg-black text-white font-semibold rounded-2xl text-sm tracking-wider transition-all flex items-center justify-center gap-x-2">
+                    <span>OPEN EMAIL</span>
+                </button>
+                <p class="text-[10px] text-center text-gray-400 mt-4">Your email client will open with the details pre-filled.</p>
+            </div>
+        </form>
+    </div>
+</div>

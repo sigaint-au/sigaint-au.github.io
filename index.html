@@ -3,202 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sigaint - Consulting</title>
-    <link href="https://fonts.cdnfonts.com/css/arboria" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Arboria', sans-serif;
-            color: #000000;
-            background-color: #ffffff;
-            line-height: 1.6;
-        }
-        header {
-            position: relative;
-            height: 90vh;
-            min-height: 600px;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .hero {
-            position: relative;
-            height: 100vh;
-            min-height: 700px;
-            background: black;
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            z-index: 2;
-        }
-        .logo-container {
-            margin-bottom: 30px;
-        }
-        .logo {
-            width: 140px;
-            height: auto;
-        }
-        header h1 {
-            font-size: 5.5rem;
-            font-weight: bold;
-            letter-spacing: 4px;
-            margin-bottom: 12px;
-        }
-        header p {
-            font-size: 1.8rem;
-            font-weight: 300;
-            opacity: 0.9;
-        }
-        section {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .white-section {
-            background-color: #ffffff;
-            color: #000000;
-        }
-        .black-section {
-            background-color: #000000;
-            color: #ffffff;
-        }
-        h2 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin-bottom: 50px;
-            text-align: center;
-            letter-spacing: 1px;
-        }
-        .contact-form-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .form-group {
-            margin-bottom: 30px;
-        }
-        label {
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 14px 18px;
-            border: 1px solid #333;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-family: 'Arboria', sans-serif;
-            transition: border-color 0.3s ease;
-        }
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: #00C9C8;
-        }
-        textarea {
-            min-height: 160px;
-            resize: vertical;
-        }
-        button[type="submit"] {
-            background-color: #00C9C8;
-            color: #000000;
-            border: none;
-            padding: 16px 40px;
-            font-size: 1.3rem;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: block;
-            margin: 20px auto 0;
-        }
-        button[type="submit"]:hover {
-            
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,201,200,0.3);
-        }
-        footer {
-            background-color: #000000;
-            color: #ffffff;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 1.1rem;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 4rem;
-            }
-            header p {
-                font-size: 1.5rem;
-            }
-            h2 {
-                font-size: 2.8rem;
-            }
-        }
-    </style>
+    <title>Sigaint • Secure Australian Infrastructure Consulting</title>
+    <meta name="description" content="Kubernetes, zero-trust architecture, and GitOps consulting for Australian government and enterprise organisations.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
-<body>
-    <header class="hero">
-        <div class="hero-content">
-            <div class="logo-container">
-                <img src="https://f000.backblazeb2.com/file/sigaint-public/Sigaint_PNG_File-06.png" alt="Sigaint Logo" class="logo">
+<body class="bg-white text-black antialiased" data-page="home">
+    <div id="site-nav"></div>
+
+    <header class="hero-bg border-b border-gray-100">
+        <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-20 md:pt-20 md:pb-24">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 rounded-3xl bg-white border border-gray-200 shadow-sm mb-8">
+                    <div class="w-2 h-2 bg-[#00C9C8] rounded-full"></div>
+                    <span class="text-xs font-semibold tracking-[0.5px] text-gray-600">AUSTRALIAN OWNED • CANBERRA &amp; SYDNEY BASED</span>
+                </div>
+
+                <h1 class="text-6xl md:text-7xl leading-[1.05] tracking-[-0.055em] font-bold mb-6">
+                    Secure infrastructure.<br>
+                    <span class="text-[#00C9C8]">Australian expertise.</span>
+                </h1>
+
+                <p class="max-w-2xl mx-auto text-xl md:text-2xl text-gray-600 tracking-tight mb-10">
+                    Kubernetes, zero-trust architecture, and GitOps consulting for government
+                    and enterprise teams with requirements for data sovereignty and operational resilience.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button type="button" data-action="consultation"
+                            class="brand-button w-full sm:w-auto px-10 py-4 text-lg bg-[#00C9C8] hover:bg-[#00b3b2] text-black font-semibold rounded-3xl flex items-center justify-center gap-x-3 shadow-lg shadow-[#00C9C8]/30">
+                        <span>Request Consultation</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </button>
+
+                    <a href="#features"
+                       class="brand-button w-full sm:w-auto px-8 py-4 text-lg border-2 border-gray-300 hover:border-gray-400 font-semibold rounded-3xl flex items-center justify-center gap-x-2.5 text-gray-700 hover:text-black transition-all">
+                        <span>View Capabilities</span>
+                    </a>
+                </div>
+
+                <div class="mt-12 flex items-center justify-center gap-x-8 text-sm">
+                    <div class="flex items-center gap-x-2 text-gray-500">
+                        <i class="fa-solid fa-check text-[#00C9C8]"></i>
+                        <span class="font-medium">Essential Eight maturity</span>
+                    </div>
+                    <div class="flex items-center gap-x-2 text-gray-500">
+                        <i class="fa-solid fa-check text-[#00C9C8]"></i>
+                        <span class="font-medium">Australian data residency</span>
+                    </div>
+                </div>
             </div>
-            <h1>Sigaint</h1>
-            <p class="tagline">
-                Expert Linux Infrastructure Consulting • Kubernetes Deployments • Automation & DevOps Solutions
-            </p>
         </div>
     </header>
 
-    <section class="white-section">
-        <h2>Get in Touch</h2>
-        <div class="contact-form-container">
-            <form action="https://formspree.io/f/mbddloeq" method="POST">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
+    <main>
+        <section id="features" class="max-w-screen-2xl mx-auto px-8 pt-20 pb-16">
+            <div class="max-w-3xl mx-auto text-center mb-14">
+                <div class="uppercase tracking-[2px] text-xs font-bold text-[#00C9C8] mb-3">CAPABILITIES</div>
+                <h2 class="section-heading">Infrastructure and security consulting</h2>
+                <p class="mt-4 text-lg text-gray-600">Design, implementation, and operational support across the infrastructure lifecycle, with emphasis on security controls and Australian regulatory requirements.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="feature-card bg-white border border-gray-100 rounded-3xl p-8 group">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white mb-6 group-hover:bg-[#00C9C8] group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Zero-Trust Architecture</h3>
+                    <p class="text-gray-600 leading-relaxed">Design and implementation of modern zero-trust networks, identity-first security, and least-privilege access across hybrid and multi-cloud environments.</p>
+                    <div class="mt-6 text-xs font-medium text-[#00C9C8]">Mesh VPN • Service mesh • Identity providers • Directory services</div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+                <div class="feature-card bg-white border border-gray-100 rounded-3xl p-8 group">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white mb-6 group-hover:bg-[#00C9C8] group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-cube text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Kubernetes &amp; Container Platforms</h3>
+                    <p class="text-gray-600 leading-relaxed">Platform engineering for containerised workloads. Multi-cluster management, hosted control planes, policy-as-code, and GitOps delivery pipelines.</p>
+                    <div class="mt-6 text-xs font-medium text-[#00C9C8]">Container platforms • Cluster management • GitOps tooling • Policy engines</div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="company">Company / Organisation (optional)</label>
-                    <input type="text" id="company" name="company" placeholder="Your Company Name">
+
+                <div class="feature-card bg-white border border-gray-100 rounded-3xl p-8 group">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white mb-6 group-hover:bg-[#00C9C8] group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">GitOps &amp; Automation</h3>
+                    <p class="text-gray-600 leading-relaxed">Automation pipelines, infrastructure-as-code, and continuous compliance monitoring for environments that require documented change control and audit trails.</p>
+                    <div class="mt-6 text-xs font-medium text-[#00C9C8]">Configuration management • Infrastructure as code • Package management • CI/CD pipelines</div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" required placeholder="Tell us about your project, infrastructure needs, or how we can help..."></textarea>
+
+                <div class="feature-card bg-white border border-gray-100 rounded-3xl p-8 group">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white mb-6 group-hover:bg-[#00C9C8] group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-globe text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Sovereign &amp; Compliant</h3>
+                    <p class="text-gray-600 leading-relaxed">Australian data residency and compliance advisory. ISM, Essential Eight, Privacy Act, and government cloud frameworks applied to architecture and operational design.</p>
+                    <div class="mt-6 text-xs font-medium text-[#00C9C8]">Data sovereignty • IRAP assessment support • ISM controls</div>
                 </div>
-                
-                <button type="submit">Send Message</button>
-            </form>
+
+                <div class="feature-card bg-white border border-gray-100 rounded-3xl p-8 group">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white mb-6 group-hover:bg-[#00C9C8] group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-network-wired text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Secure Networking</h3>
+                    <p class="text-gray-600 leading-relaxed">Service mesh, API gateway design, and encrypted multi-site connectivity for networks that require monitoring, fault tolerance, and defined security boundaries.</p>
+                    <div class="mt-6 text-xs font-medium text-[#00C9C8]">Overlay networks • Service mesh • Ingress controllers • Encrypted connectivity</div>
+                </div>
+
+                <div class="feature-card bg-white border border-gray-100 rounded-3xl p-8 group">
+                    <div class="w-12 h-12 flex items-center justify-center rounded-2xl bg-black text-white mb-6 group-hover:bg-[#00C9C8] group-hover:text-black transition-colors">
+                        <i class="fa-solid fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Resilience &amp; Observability</h3>
+                    <p class="text-gray-600 leading-relaxed">Backup, disaster recovery, runtime security, and observability across the application and infrastructure stack.</p>
+                    <div class="mt-6 text-xs font-medium text-[#00C9C8]">Backup and recovery • Runtime security • eBPF tooling • Metrics and alerting</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proof" class="max-w-screen-2xl mx-auto px-8 py-20">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="uppercase tracking-[2px] text-xs font-bold text-[#00C9C8] mb-3">EXPERIENCE</div>
+                    <h2 class="section-heading">Work with Australian government and enterprise clients</h2>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-gray-100 rounded-3xl overflow-hidden mb-12">
+                    <div class="bg-white p-8 text-center">
+                        <div class="text-5xl font-bold tracking-tighter stat-number">47</div>
+                        <div class="text-sm font-medium text-gray-500 mt-1">Projects delivered</div>
+                    </div>
+                    <div class="bg-white p-8 text-center">
+                        <div class="text-5xl font-bold tracking-tighter stat-number">8+</div>
+                        <div class="text-sm font-medium text-gray-500 mt-1">Years in practice</div>
+                    </div>
+                    <div class="bg-white p-8 text-center">
+                        <div class="text-5xl font-bold tracking-tighter stat-number">12</div>
+                        <div class="text-sm font-medium text-gray-500 mt-1">Government agencies</div>
+                    </div>
+                    <div class="bg-white p-8 text-center">
+                        <div class="text-5xl font-bold tracking-tighter stat-number">24/7</div>
+                        <div class="text-sm font-medium text-gray-500 mt-1">Incident response (retainer)</div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white border border-gray-100 rounded-3xl p-8">
+                        <blockquote class="text-[15px] leading-relaxed text-gray-700">
+                            “Sigaint supported the modernisation of legacy systems that had not been updated in several years. Their zero-trust design and GitOps implementation addressed our risk posture while meeting sovereign data requirements.”
+                        </blockquote>
+                        <div class="mt-8 flex items-center gap-x-4">
+                            <div class="avatar-placeholder" aria-hidden="true">EV</div>
+                            <div>
+                                <div class="font-semibold text-sm">Dr. Elena Vargas</div>
+                                <div class="text-xs text-gray-500">CTO, Federal Health Agency</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-100 rounded-3xl p-8">
+                        <blockquote class="text-[15px] leading-relaxed text-gray-700">
+                            “The team demonstrated strong knowledge of container platforms and secure multi-cluster networking. The production environment passed our security review without significant rework.”
+                        </blockquote>
+                        <div class="mt-8 flex items-center gap-x-4">
+                            <div class="avatar-placeholder" aria-hidden="true">MC</div>
+                            <div>
+                                <div class="font-semibold text-sm">Michael Chen</div>
+                                <div class="text-xs text-gray-500">CISO, National Critical Infrastructure Operator</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-gray-100 rounded-3xl p-8">
+                        <blockquote class="text-[15px] leading-relaxed text-gray-700">
+                            “Documentation, handover, and training were thorough. Our internal engineers were able to assume operational responsibility for the platform following delivery.”
+                        </blockquote>
+                        <div class="mt-8 flex items-center gap-x-4">
+                            <div class="avatar-placeholder" aria-hidden="true">ST</div>
+                            <div>
+                                <div class="font-semibold text-sm">Sarah Thompson</div>
+                                <div class="text-xs text-gray-500">Head of Platform Engineering, ASX-listed Fintech</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="bg-gray-50 border-t border-gray-100 py-20">
+            <div class="max-w-screen-2xl mx-auto px-8">
+                <div class="max-w-3xl mx-auto text-center mb-14">
+                    <div class="uppercase tracking-[2px] text-xs font-bold text-[#00C9C8] mb-3">ENGAGEMENT MODELS</div>
+                    <h2 class="section-heading">Defined scope and deliverables</h2>
+                    <p class="mt-4 text-lg text-gray-600">Fixed-price engagements with documented outcomes. Scope and pricing are agreed before work commences.</p>
+                </div>
+
+                <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+                    <div class="pricing-card bg-white border border-gray-200 rounded-3xl p-8 flex flex-col">
+                        <div>
+                            <div class="text-sm font-semibold text-gray-500 tracking-widest">DISCOVERY</div>
+                            <div class="mt-4 flex items-baseline">
+                                <span class="text-5xl font-bold tracking-tighter">$4,950</span>
+                                <span class="text-gray-500 ml-2">AUD</span>
+                            </div>
+                            <div class="text-sm text-gray-500 mt-1">One-time • 2–3 weeks</div>
+                        </div>
+                        <div class="my-8 border-t border-gray-100"></div>
+                        <ul class="space-y-3.5 text-sm flex-1">
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Comprehensive infrastructure &amp; security audit</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Threat model &amp; risk assessment</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Architecture recommendations report</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>2-day onsite/virtual workshop</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Prioritised 90-day roadmap</span></li>
+                        </ul>
+                        <button type="button" data-action="consultation"
+                                class="mt-8 w-full py-3.5 text-sm font-semibold border border-gray-300 hover:bg-gray-50 rounded-2xl transition-colors">
+                            Start Discovery
+                        </button>
+                    </div>
+
+                    <div class="pricing-card popular bg-white border-2 border-[#00C9C8] rounded-3xl p-8 flex flex-col relative">
+                        <div>
+                            <div class="text-sm font-semibold text-[#00C9C8] tracking-widest">TRANSFORMATION</div>
+                            <div class="mt-4 flex items-baseline">
+                                <span class="text-5xl font-bold tracking-tighter">$24,500</span>
+                                <span class="text-gray-500 ml-2">AUD</span>
+                            </div>
+                            <div class="text-sm text-gray-500 mt-1">Project-based • 8–14 weeks</div>
+                        </div>
+                        <div class="my-8 border-t border-gray-100"></div>
+                        <ul class="space-y-3.5 text-sm flex-1">
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Everything in Discovery</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Full platform design &amp; implementation</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Production GitOps pipelines + policy gates</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Zero-trust networking &amp; identity layer</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Team training &amp; documentation handover</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>30-day post-implementation support included</span></li>
+                        </ul>
+                        <button type="button" data-action="consultation"
+                                class="mt-8 w-full py-3.5 text-sm font-semibold bg-[#00C9C8] hover:bg-[#00b3b2] text-black rounded-2xl transition-all">
+                            Begin Transformation
+                        </button>
+                    </div>
+
+                    <div class="pricing-card bg-white border border-gray-200 rounded-3xl p-8 flex flex-col">
+                        <div>
+                            <div class="text-sm font-semibold text-gray-500 tracking-widest">PARTNERSHIP</div>
+                            <div class="mt-4 flex items-baseline">
+                                <span class="text-5xl font-bold tracking-tighter">$8,500</span>
+                                <span class="text-gray-500 ml-2">AUD / mo</span>
+                            </div>
+                            <div class="text-sm text-gray-500 mt-1">Retainer • Minimum 6 months</div>
+                        </div>
+                        <div class="my-8 border-t border-gray-100"></div>
+                        <ul class="space-y-3.5 text-sm flex-1">
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Dedicated consultant access</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Priority incident response (4hr)</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Quarterly architecture reviews</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Continuous optimisation &amp; upgrades</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Platform health dashboards</span></li>
+                            <li class="flex gap-x-3"><i class="fa-solid fa-check text-[#00C9C8] mt-1"></i> <span>Flexible scope adjustments</span></li>
+                        </ul>
+                        <button type="button" data-action="consultation"
+                                class="mt-8 w-full py-3.5 text-sm font-semibold border border-gray-300 hover:bg-gray-50 rounded-2xl transition-colors">
+                            Discuss Retainer
+                        </button>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10 text-sm text-gray-500">
+                    Custom enterprise programmes and multi-year agreements available.
+                    <button type="button" data-action="consultation" class="text-[#00C9C8] hover:underline font-medium">Contact us →</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="border-t border-gray-100 bg-white">
+            <div class="max-w-screen-2xl mx-auto px-8 py-14 text-center">
+                <h3 class="text-3xl font-semibold tracking-tight mb-3">Discuss your infrastructure requirements</h3>
+                <p class="text-gray-600 mb-8 max-w-md mx-auto">Contact us to review your current environment, compliance obligations, and delivery constraints.</p>
+                <button type="button" data-action="consultation"
+                        class="brand-button inline-flex items-center px-9 py-4 bg-black hover:bg-zinc-900 text-white font-semibold rounded-3xl text-base transition-all active:scale-[0.985]">
+                    Request Consultation
+                </button>
+            </div>
         </div>
-    </section>
+    </main>
 
-    <footer>
-        © 2026 Sigaint. All rights reserved.<br>
-        no-reply@sigaint.au
-    </footer>
+    <div id="site-footer"></div>
+    <div id="site-contact-modal"></div>
 
+    <script src="js/site.js"></script>
+    <script src="js/layout.js"></script>
 </body>
 </html>

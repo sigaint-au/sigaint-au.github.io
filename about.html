@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About • Sigaint</title>
+    <meta name="description" content="Sigaint is an Australian infrastructure and security consultancy based in Canberra and Sydney.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="bg-white text-black antialiased" data-page="about">
+    <div id="site-nav"></div>
+
+    <header class="page-hero border-b border-gray-100">
+        <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-14">
+            <div class="max-w-3xl">
+                <div class="uppercase tracking-[2px] text-xs font-bold text-[#00C9C8] mb-3">ABOUT</div>
+                <h1 class="text-5xl md:text-6xl font-bold tracking-[-0.04em] mb-5">Australian infrastructure consultancy</h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Sigaint provides infrastructure and security consulting to government agencies and enterprise organisations operating under Australian regulatory and sovereignty requirements.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-screen-2xl mx-auto px-8 py-16">
+        <div class="max-w-3xl prose-section">
+            <h2 class="section-heading mb-6">Who we are</h2>
+            <p>
+                Sigaint Pty Ltd is an Australian-owned consultancy with consultants based in Canberra and Sydney. We work with clients across the public and private sectors on platform engineering, security architecture, and operational resilience.
+            </p>
+            <p>
+                Our work focuses on environments where compliance, auditability, and data residency are operational requirements rather than optional considerations. This includes systems subject to ISM controls, Essential Eight assessments, Privacy Act obligations, and government cloud frameworks.
+            </p>
+
+            <h3>What we do</h3>
+            <p>
+                We advise on and implement container platforms, zero-trust networking, GitOps workflows, and supporting security controls. Engagements range from short discovery assessments through to full platform delivery and ongoing retainer support.
+            </p>
+            <ul>
+                <li>Architecture review and threat modelling</li>
+                <li>Platform design and implementation</li>
+                <li>Security control integration and compliance mapping</li>
+                <li>Documentation, training, and operational handover</li>
+            </ul>
+
+            <h3>How we operate</h3>
+            <p>
+                We work as an extension of client engineering and security teams. Deliverables are documented, scope is defined before commencement, and knowledge transfer is included in every implementation engagement. We do not retain operational control of client systems beyond agreed support periods.
+            </p>
+            <p>
+                Client environments and engagement details are treated as confidential. We do not publish client names or production system details without explicit written consent.
+            </p>
+        </div>
+
+        <div class="max-w-5xl mt-16 grid md:grid-cols-3 gap-6">
+            <div class="border border-gray-100 rounded-3xl p-8">
+                <div class="text-sm font-semibold text-[#00C9C8] tracking-widest mb-2">LOCATION</div>
+                <p class="text-gray-600 text-sm leading-relaxed">Canberra and Sydney, with remote delivery available for engagements Australia-wide.</p>
+            </div>
+            <div class="border border-gray-100 rounded-3xl p-8">
+                <div class="text-sm font-semibold text-[#00C9C8] tracking-widest mb-2">SECTORS</div>
+                <p class="text-gray-600 text-sm leading-relaxed">Federal and state government, critical infrastructure, regulated industries, and enterprise technology teams.</p>
+            </div>
+            <div class="border border-gray-100 rounded-3xl p-8">
+                <div class="text-sm font-semibold text-[#00C9C8] tracking-widest mb-2">ENGAGEMENT</div>
+                <p class="text-gray-600 text-sm leading-relaxed">Fixed-scope projects and retainers. <a href="approach.html" class="text-[#00C9C8] hover:underline">See our approach</a> for delivery methodology.</p>
+            </div>
+        </div>
+
+        <div class="max-w-3xl mt-16 pt-10 border-t border-gray-100 text-center">
+            <p class="text-gray-600 mb-6">To discuss a specific requirement or request a consultation, contact us directly.</p>
+            <button type="button" data-action="consultation"
+                    class="brand-button inline-flex items-center px-8 py-3.5 bg-black hover:bg-zinc-900 text-white font-semibold rounded-2xl text-sm transition-all">
+                Request Consultation
+            </button>
+        </div>
+    </main>
+
+    <div id="site-footer"></div>
+    <div id="site-contact-modal"></div>
+
+    <script src="js/site.js"></script>
+    <script src="js/layout.js"></script>
+</body>
+</html>
