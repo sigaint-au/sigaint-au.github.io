@@ -20,33 +20,33 @@
 
         mobileBtn.addEventListener('click', () => {
             const nav = document.createElement('div');
-            nav.className = 'fixed inset-0 z-[200] bg-black/95 md:hidden';
+            nav.className = 'fixed inset-0 z-[200] bg-[#f7f7f5] md:hidden';
             nav.innerHTML = `
                 <div class="p-8">
                     <div class="flex justify-between items-center mb-10">
                         <a href="index.html" class="flex items-center gap-x-3">
                             <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 22C6 22 12 8 22 8C32 8 38 22 38 22C38 22 32 36 22 36C12 36 6 22 6 22Z" stroke="white" stroke-width="4.5" stroke-linejoin="round"/>
-                                <circle cx="22" cy="22" r="6" fill="white"/>
-                                <path d="M6 22H2" stroke="white" stroke-width="4" stroke-linecap="round"/>
-                                <path d="M38 22H42" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M6 22C6 22 12 8 22 8C32 8 38 22 38 22C38 22 32 36 22 36C12 36 6 22 6 22Z" stroke="#0a0a0a" stroke-width="4.5" stroke-linejoin="round"/>
+                                <circle cx="22" cy="22" r="6" fill="#0a0a0a"/>
+                                <path d="M6 22H2" stroke="#0a0a0a" stroke-width="4" stroke-linecap="round"/>
+                                <path d="M38 22H42" stroke="#0a0a0a" stroke-width="4" stroke-linecap="round"/>
                             </svg>
-                            <span class="text-white text-3xl font-bold tracking-tighter">Sigaint</span>
+                            <span class="text-black text-3xl font-semibold tracking-tighter">Sigaint</span>
                         </a>
-                        <button class="text-white text-4xl leading-none" aria-label="Close menu">&times;</button>
+                        <button class="text-black text-4xl leading-none" aria-label="Close menu">&times;</button>
                     </div>
 
-                    <div class="flex flex-col gap-y-6 text-xl text-white font-medium">
+                    <div class="flex flex-col gap-y-6 text-xl text-black font-medium">
                         <a href="${homeLink('#features')}" class="py-1">Capabilities</a>
                         <a href="${homeLink('#proof')}" class="py-1">Experience</a>
-                        <a href="${homeLink('#pricing')}" class="py-1">Pricing</a>
+                        <a href="${homeLink('#pricing')}" class="py-1">Engagements</a>
                         <a href="about.html" class="py-1">About</a>
                         <a href="approach.html" class="py-1">Our Approach</a>
                     </div>
 
                     <div class="pt-10">
                         <button type="button" data-action="consultation"
-                                class="w-full py-4 bg-[#00C9C8] text-black font-semibold rounded-3xl text-lg">
+                                class="w-full py-4 bg-black text-white font-semibold rounded-full text-lg">
                             Book Consultation
                         </button>
                     </div>
@@ -92,10 +92,10 @@
         e.preventDefault();
 
         const goalLabels = {
-            'platform-modernisation': 'Platform modernisation / Kubernetes transformation',
-            'zero-trust': 'Zero-trust architecture implementation',
+            'platform-modernisation': 'Platform modernisation',
+            'zero-trust': 'Security architecture implementation',
             'security-audit': 'Security audit & compliance review',
-            'gitops': 'GitOps & automation strategy',
+            'gitops': 'Automation & delivery strategy',
             'ongoing-support': 'Ongoing platform partnership / retainer',
             'other': 'Other'
         };
@@ -204,7 +204,7 @@
 
         document.querySelectorAll('[data-nav-page]').forEach(link => {
             if (link.dataset.navPage === currentPage) {
-                link.classList.add('active', 'text-[#00C9C8]');
+                link.classList.add('active', 'text-black');
             }
         });
     }
@@ -218,7 +218,6 @@
     }
 
     function init() {
-        document.documentElement.style.setProperty('--accent-teal', '#00C9C8');
         fixHomeNavLinks();
         setupMobileMenu();
         setupContactModal();
