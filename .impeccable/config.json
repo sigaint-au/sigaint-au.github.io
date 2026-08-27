@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "feature-card",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-08-27T03:15:49.528Z",
+        "reason": "False positive: detector cannot resolve Tailwind CDN p-8 (32px padding) on feature-card elements. Children have ample inset in rendered page."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "pricing-card",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-08-27T03:15:49.897Z",
+        "reason": "False positive: detector cannot resolve Tailwind CDN p-8 (32px padding) on pricing-card elements. Children have ample inset in rendered page."
+      }
+    ]
+  }
+}

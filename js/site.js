@@ -2,6 +2,8 @@
     'use strict';
 
     let contactModal = null;
+    let modalTrigger = null;
+    let focusTrapHandler = null;
 
     function isHomePage() {
         const page = document.body.dataset.page;
@@ -72,8 +74,30 @@
         contactModal = document.getElementById('contact-modal');
         if (!contactModal) return;
 
+        modalTrigger = document.activeElement;
+
         contactModal.classList.remove('hidden');
         contactModal.classList.add('flex');
+
+        focusTrapHandler = (e) => {
+            if (e.key !== 'Tab') return;
+            const focusable = contactModal.querySelectorAll(
+                'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            if (focusable.length === 0) return;
+
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        };
+        contactModal.addEventListener('keydown', focusTrapHandler);
 
         setTimeout(() => {
             const firstInput = document.getElementById('full-name');
@@ -85,6 +109,14 @@
         if (contactModal) {
             contactModal.classList.remove('flex');
             contactModal.classList.add('hidden');
+            if (focusTrapHandler) {
+                contactModal.removeEventListener('keydown', focusTrapHandler);
+                focusTrapHandler = null;
+            }
+        }
+        if (modalTrigger) {
+            modalTrigger.focus();
+            modalTrigger = null;
         }
     }
 

@@ -1,11 +1,14 @@
 <div id="contact-modal"
-     class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-6">
+     class="hidden fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm flex items-center justify-center p-6"
+     role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
     <div class="modal bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden" onclick="event.stopImmediatePropagation()">
         <div class="px-8 pt-8 pb-6 border-b flex items-center justify-between">
             <div>
-                <div class="font-semibold text-2xl tracking-tight">Request a consultation</div>
+                <div class="font-semibold text-2xl tracking-tight" id="contact-modal-title">Request a consultation</div>
                 <div class="text-sm text-gray-500 mt-1">Complete the form to open an email to consultation@sigaint.au</div>
             </div>
+            <button type="button" data-action="close-modal" class="text-gray-400 hover:text-gray-600 w-11 h-11 flex items-center justify-center text-2xl leading-none" aria-label="Close">&times;</button>
+        </div>
             <button type="button" data-action="close-modal" class="text-gray-400 hover:text-gray-600 w-9 h-9 flex items-center justify-center text-2xl leading-none" aria-label="Close">&times;</button>
         </div>
 
@@ -61,7 +64,7 @@
                         class="w-full py-4 bg-black hover:bg-zinc-900 active:bg-black text-white font-semibold rounded-full text-sm tracking-wider transition-all flex items-center justify-center gap-x-2">
                     <span>OPEN EMAIL</span>
                 </button>
-                <p class="text-[10px] text-center text-gray-400 mt-4">Your email client will open with the details pre-filled.</p>
+                <p class="text-[10px] text-center text-gray-500 mt-4">Your email client will open with the details pre-filled.</p>
             </div>
         </form>
     </div>

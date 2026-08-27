@@ -6,17 +6,34 @@
     <title>Careers • Sigaint</title>
     <meta name="description" content="Career opportunities at Sigaint, an Australian infrastructure and security consultancy.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: 'var(--bg)',
+              'bg-elev': 'var(--bg-elev)',
+              ink: 'var(--ink)',
+              'ink-2': 'var(--ink-2)',
+              muted: 'var(--muted)',
+              line: 'var(--line)',
+            }
+          }
+        }
+      }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/site.css">
 </head>
 <body class="bg-[#f7f7f5] text-black antialiased" data-page="careers">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[300] focus:bg-black focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to content</a>
     <div id="site-nav"></div>
 
     <header class="page-hero border-b border-gray-200">
         <div class="max-w-6xl mx-auto px-8 pt-16 pb-14">
             <div class="max-w-3xl">
-                <div class="uppercase tracking-[2px] text-xs font-bold text-gray-500 mb-3">CAREERS</div>
-                <h1 class="text-5xl md:text-6xl font-bold tracking-[-0.04em] mb-5">Work on substantive infrastructure problems</h1>
+                <div class="uppercase tracking-[2px] text-xs font-bold text-gray-600 mb-3">CAREERS</div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-[-0.04em] mb-5">Work on substantive infrastructure problems</h1>
                 <p class="text-xl text-gray-600 leading-relaxed">
                     Sigaint hires experienced engineers and security practitioners for client-facing consulting roles. We prioritise depth of technical knowledge and clear written communication.
                 </p>
@@ -24,7 +41,7 @@
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-8 py-16">
+    <main id="main" class="max-w-6xl mx-auto px-8 py-16">
         <div class="max-w-3xl prose-section mb-16">
             <h2 class="section-heading mb-6">Working at Sigaint</h2>
             <p>
